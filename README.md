@@ -13,27 +13,19 @@ Movie Browser is a React application that allows users to search for movies, vie
 - Installation
 
 ## Getting started
-1.ad
-2.aqds
 
 1. **Clone the repository**:
-```bash
-git clone https://github.com/DvirUliel/React-Movie-Browser.git
-
-
-
-2. **Navigate to the project directory**:
-```bash
-cd movie-browser
-
-3. **Install dependencies**:
-```bash
-npm install
-
-4. **Add your TMDb API key to the .env file**:
-```bash
-REACT_APP_API_KEY=your_tmdb_api_key
-
-5. **Run the project**:
-```bash
-npm start
+   ```bash
+   git clone https://github.com/DvirUliel/React-Movie-Browser.git
+3. **Navigate to the project directory**:
+   ```bash
+   cd movie-browser
+5. **Install dependencies**:
+   ```bash
+   npm install
+7. **Add your TMDb API key to the .env file**:
+   ```bash
+   REACT_APP_API_KEY=your_tmdb_api_key
+9. **Run the project**:
+   ```bash
+   npm start
