@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Movie Browser 🎬
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Movie Browser is a React application that allows users to search for movies, view detailed information, and navigate between various pages. This project utilizes The Movie Database (TMDb) API to fetch movie data and display it in an intuitive interface.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Search for movies by title
+- View movie details, including genres, ratings, and descriptions
+- Responsive design optimized for various screen sizes
+- Simple and intuitive navigation
+- Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Navbar
+* File: Navbar.js
+* Description: The Navbar component is a responsive navigation bar for navigating the application. It includes links to the Home    and About pages and a search input. When the user types in the search input, they are redirected to the search page where they    can view results matching their query.
+* Props:
+   * searchText: The current search text.
+   * setSearchText: Function to update the search text state in the parent component.
+### Home
+* File: Home.js
+* Description: The Home component is the landing page for the application. It serves as the main page for users to start            exploring the application.
+* Usage: Displays a welcome message or introductory content about the Movie Browser.
+### AboutView
+* File: AboutView.js
+* Description: The AboutView component provides information about the Movie Browser project, its purpose, and its creators. This    is a static informational page.
+* Usage: Used to showcase details about the app and possibly the developers or contributors.
+### Hero
+* File: Hero.js
+* Description: The Hero component is a reusable, large header or banner that displays a prominent title or message at the top of    pages. In the search view, it displays the search query, while in other pages, it shows relevant headings.
+* Props:
+   * text: The text to be displayed in the hero banner.
+### SearchView
+* File: SearchView.js
+* Description: The SearchView component displays search results for movies based on user input. It sends requests to the TMDb API   and displays movie cards for each result.
+* Props:
+   * keyword: The search keyword entered by the user.
+   * searchResults: Array of search results returned by the API.
+   * Usage: Renders individual MovieCard components for each search result, along with a message if no results are found.
+### MovieView
+* File: MovieView.js
+* Description: The MovieView component displays detailed information about a single movie, including title, description, genres,    vote count, and rating. It also includes the movie's poster image.
+* Props:
+   * movieId: ID of the movie to fetch details for.
+   * Usage: Fetches movie details from the API using the provided movie ID and displays it.
+### NotFound
+* File: NotFound.js
+* Description: The NotFound component is a fallback page for any routes that do not match existing components. It displays a "404   - Page Not Found" message and provides a link to return to the home page.
+* Usage: Shown when a user tries to access a page that does not exist in the application.
 
-### `npm test`
+## Getting started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/DvirUliel/React-Movie-Browser.git
+   
+2. **Navigate to the project directory**:
+   ```bash
+   cd movie-browser
+   
+3. **Install dependencies**:
+   ```bash
+   npm install
+   
+4. **Add your TMDb API key to the .env file**:
+   ```bash
+   REACT_APP_API_KEY=your_tmdb_api_key
+   
+5. **Run the project**:
+   ```bash
+   npm start
