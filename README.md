@@ -59,7 +59,7 @@ Movie Browser is a React application that allows users to search for movies, vie
    
 2. **Navigate to the project directory**:
    ```bash
-   cd movie-browser
+   cd React-Movie-Browser
    
 3. **Install dependencies**:
    ```bash
